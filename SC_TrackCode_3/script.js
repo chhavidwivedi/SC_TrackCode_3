@@ -23,7 +23,7 @@ function handleCellClick(event) {
   cell.classList.add('taken');
 
   if (checkWinner()) {
-    statusText.textContent = Player ${currentPlayer} Wins! 🎉;
+    statusText.textContent = 'Player ${currentPlayer} Wins! 🎉';
     gameActive = false;
     return;
   }
@@ -35,7 +35,7 @@ function handleCellClick(event) {
   }
 
   currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-  statusText.textContent = Player ${currentPlayer}'s Turn;
+  statusText.textContent = 'Player ${currentPlayer}'s Turn';
 }
 
 function checkWinner() {
@@ -48,7 +48,7 @@ function restartGame() {
   board = ['', '', '', '', '', '', '', '', ''];
   currentPlayer = 'X';
   gameActive = true;
-  statusText.textContent = Player ${currentPlayer}'s Turn;
+  statusText.textContent = 'Player ${currentPlayer}'s Turn';
 
   cells.forEach(cell => {
     cell.textContent = '';
